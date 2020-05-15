@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'ProjetController@index')->name('Acceuil');
 Route::get('home', 'ProjetController@index');
 
+Route::get('/covid', function (){return view('island.covid');})->name('covid');
 Route::get('/carte', function (){return view('island.Voir-sur-la-carte');})->name('carte');
 
 Route::get('/voir', 'ProjetController@voir')->name('voir');

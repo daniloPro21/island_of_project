@@ -56,6 +56,8 @@
        <section class="u-align-center u-clearfix u-white u-section-3" id="sec-22b7">
            <div class="u-clearfix u-sheet u-sheet-1">
 
+               <h2 class="u-text u-text-palette-2-base u-text-1">Projets dans la categorie <span style="font-weight: bold">{{ $categorie }}</span></h2>
+
                <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-20 u-layout-wrap u-layout-wrap-1">
                    <div class="u-layout">
                        <div class="u-layout-row">
@@ -80,11 +82,11 @@
                                            <p class="u-align-center u-text u-text-6">
                                              {{ $ts->description }}
                                            </p>
-                                           <h3 class="u-text u-text-palette-2-base u-text-7 badge badge-primary">{{ $ts->categorie }}</h3>
+                                           <h3 class="u-text u-text-palette-2-base u-text-7 badge badge-light">{{ $ts->categorie }}</h3>
                                            <h4 class="u-text u-text-8">{{$ts->stade}}</h4>
-                                           <h4 class="u-text u-text-9">Stade</h4>
-                                           <h4 class="u-align-left-lg u-align-left-xl u-text u-text-10">Produit</h4>
-                                           <h4 class="u-align-left-xl u-text u-text-11">${{ $ts->nature }}</h4>
+                                           <h4 class="u-text u-text-9">Stade : </h4>
+                                           <h4 class="u-align-left-lg u-align-left-xl u-text u-text-10">Produit : </h4>
+                                           <h4 class="u-align-left-xl u-text u-text-11">{{ $ts->nature }}</h4>
                                        </div>
                                    </div>
                                    <div class="u-container-style u-expanded-width u-group u-group-3">

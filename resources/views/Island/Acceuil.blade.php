@@ -94,7 +94,7 @@
                                     <p class="u-align-center u-text u-text-6">
                                         {{ $c->description }}
                                     </p>
-                                    <h3 class="u-text u-text-palette-2-base u-text-7 badge badge-primary">{{ $c->categorie }}</h3>
+                                    <h3 class="u-text u-text-palette-2-base u-text-7 badge badge-light">{{ $c->categorie }}</h3>
                                     <h4 class="u-text u-text-8">{{$c->stade}}</h4>
                                     <h4 class="u-text u-text-9">Stade</h4>
                                     <h4 class="u-align-left-lg u-align-left-xl u-text u-text-10">Produit</h4>
@@ -141,7 +141,7 @@
                                     <p class="u-align-center u-text u-text-6">
                                         {{$ps->description}}
                                     </p>
-                                    <h3 class="u-text u-text-palette-2-base u-text-7 badge badge-primary">{{$ps->categorie}}</h3>
+                                    <h3 class="u-text u-text-palette-2-base u-text-7 badge badge-light">{{$ps->categorie}}</h3>
                                     <h4 class="u-text u-text-8">{{$ps->stade}}</h4>
                                     <h4 class="u-text u-text-9">Stade : </h4>
                                     <h4 class="u-align-left-lg u-align-left-xl u-text u-text-10">Produit : </h4>

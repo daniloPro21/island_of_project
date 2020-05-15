@@ -26,6 +26,9 @@
     @if(Route::current()->getName() == 'carte')
         <link rel="stylesheet" href="{{ asset('css/Voir-sur-la-carte.css') }}" media="screen">
     @endif
+    @if(Route::current()->getName() == 'covid')
+        <link rel="stylesheet" href="{{ asset('css/Voir-sur-la-carte.css') }}" media="screen">
+    @endif
     @if (Route::current()->getName() == 'editer')
         <link rel="stylesheet" href="{{ asset('css/Editer-son-profil.css') }}" media="screen">
     @endif
@@ -75,9 +78,9 @@
                         <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ route('Acceuil') }}" style="padding: 10px 20px;">PROJET / IDEES</a>
                             </li>
 
-                            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ route('carte') }}" style="padding: 10px 20px;">VOIR SUR LA CARTE</a>
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 10px 20px;">VOIR SUR LA CARTE</a>
                                 <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
-                                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="{{ route('carte') }}">COVID 19</a>
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="{{ route('covid') }}">COVID 19</a>
                                         </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="{{ route('carte') }}">Autres</a>
                                         </li></ul>
                                 </div>

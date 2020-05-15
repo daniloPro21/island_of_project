@@ -94,7 +94,7 @@ class ProjetController extends Controller
             ->where('projets.categorie', '=', $categorie)
             ->get();
 
-        return view('Island.categorie', compact('t'));
+        return view('Island.categorie', compact('t', 'categorie'));
     }
 
 

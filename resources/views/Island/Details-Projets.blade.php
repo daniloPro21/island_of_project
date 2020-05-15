@@ -22,20 +22,20 @@
                                             @foreach($user as $us)
                                             <p class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-align-left-xl u-text u-text-black u-text-1">Poste par :
                                                 {{$projets->user->name}}</p>
-                                            <p class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-align-left-xl u-text u-text-black u-text-2">Yaounde Cmaeroun</p>
+                                            <p class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-align-left-xl u-text u-text-black u-text-2">{{ $us->adresse }}</p>
                                             <h2 class="u-align-center u-text u-text-3">{{$projets->titre}}</h2>
                                             <h2 class="u-align-center u-text u-text-3">Probleme</h2>
                                                 <p class="u-align-center u-text u-text-4"> {{ $projets->probleme }}</p>
                                                 <h2 class="u-align-center u-text u-text-3">Solution</h2>
                                                 <p class="u-align-center u-text u-text-4"> {{ $projets->solution }}</p>
                                                 <p class="u-text u-text-palette-2-base u-text-5">Duree : {{$projets->dure}}</p>
-                                            <p class="u-text u-text-default u-text-palette-2-base u-text-6 badge badge-primary">{{$projets->categorie}}</p>
+                                            <p class="u-text u-text-default u-text-palette-2-base u-text-3 badge badge-light">{{$projets->categorie}}</p>
                                             <p class="u-text u-text-black u-text-default u-text-9">{{$projets->nature}}</p>
                                             <p class="u-text u-text-black u-text-default u-text-10">PRODUIT : </p>
                                                 <p class="u-text u-text-black u-text-default u-text-9">{{$projets->stade}}</p>
                                                 <p class="u-text u-text-black u-text-default u-text-10">STADE : </p>
-                                            <a href="#" class="u-border-radius-33 u-btn u-btn-round u-button-style u-palette-2-base u-btn-1">Pick deck video</a>
-                                            <a href="#" class="u-border-radius-33 u-btn u-btn-round u-button-style u-btn-2">visiter le site web</a>
+                                            <a href="https://{{$projets->video}}" class="u-border-radius-33 u-btn u-btn-round u-button-style u-palette-2-base u-btn-1">Pick deck video</a>
+                                            <a href="https://{{$projets->site}}" class="u-border-radius-33 u-btn u-btn-round u-button-style u-btn-2">visiter le site web</a>
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
         </section>
         <section class="u-clearfix u-section-2" id="carousel_9db3">
             <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-                <h3 class="u-align-center u-text u-text-1">Notre Equipes&nbsp;</h3>
+                <h3 class="u-align-center u-text u-text-1">Notre Equipes</h3>
                 <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
                     <div class="u-layout">
                         <div class="u-layout-row">
@@ -73,7 +73,7 @@
                                     <div class="u-container-style u-expanded-width-xs u-group u-group-1">
                                         <div class="u-container-layout u-valign-top u-container-layout-2">
                                             <img class="u-expand-resize u-image u-image-default u-image-1 rounded-circle" data-image-width="1280" data-image-height="800" src="{{ asset('uploadprofile/'.$projets->user->file) }}">
-                                            <a href="#" class="u-border-radius-33 u-btn u-btn-round u-button-style u-btn-1">Contacter</a>
+                                            <a href="https://wa.me/{{ $us->phone }}" class="u-border-radius-33 u-btn u-btn-round u-button-style u-btn-1">Contacter</a>
                                         </div>
                                     </div>
                                 </div>
