@@ -11,22 +11,13 @@
                     <div class="u-carousel-item u-clearfix u-active u-section-1-1">
                         <div class="u-expanded u-grey-10 u-map u-map-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">
                             <div class="embed-responsive">
-                                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1AywXvTyCDdOM_L0BGg5vcObATDG5Kxgz" width="640"
-                                        height="480"></iframe>
+                                <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/fr/map/carte-autres-projets_458628?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false">
+                                </iframe><p><a href="//umap.openstreetmap.fr/fr/map/carte-autres-projets_458628">Voir en plein écran</a></p>
                             </div>
 
                         </div>
                         <div class="u-clearfix u-sheet u-sheet-1">
-                            <div class="u-align-left u-container-style u-group u-white u-group-1">
-                                <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                    <h2 class="u-text u-text-1">Island of Project</h2>
-                                    <p class="u-text u-text-2">Efoulan Yaounde Cameroun</p>
-                                    <p class="u-text u-text-3">1 212-736-3100</p>
-                                    <p class="u-text u-text-4">
-                                        <a href="mailto:contacts@esbnyc.com">contacts@esbnyc.com</a>
-                                    </p>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
