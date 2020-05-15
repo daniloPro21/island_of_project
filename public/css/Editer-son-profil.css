@@ -1,0 +1,22 @@
+.u-block-1dcd-2 {position: absolute; bottom: 10px}
+.u-block-1dcd-3 {position: absolute; left: 0}
+.u-block-1dcd-4 {position: absolute; right: 0}.u-section-1-1 {background-image: linear-gradient(0deg, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/nesa-by-makers-737053-unsplash.jpg")}
+.u-section-1-1 .u-sheet-1 {min-height: 753px}
+.u-section-1-1 .u-text-1 {margin: 95px auto 0}
+.u-section-1-1 .u-form-1 {height: 419px; margin: 0 270px 0 300px}
+.u-section-1-1 .u-btn-1 {background-image: none; border-style: none}
+.u-section-1-1 .u-btn-2 {background-image: none; border-style: none; margin: -90px 312px 60px auto; padding: 10px 40px 12px 39px}
+
+@media (max-width: 1199px){ .u-section-1-1 .u-sheet-1 {min-height: 537px}
+.u-section-1-1 .u-form-1 {margin-left: 200px; margin-right: 170px; width: 570px}
+.u-section-1-1 .u-btn-2 {margin-right: 112px} }
+
+@media (max-width: 991px){ .u-section-1-1 .u-form-1 {margin-left: 90px; margin-right: 60px}
+.u-section-1-1 .u-btn-2 {margin-right: 0} }
+
+@media (max-width: 767px){ .u-section-1-1 .u-sheet-1 {min-height: 517px}
+.u-section-1-1 .u-form-1 {margin-left: 0; margin-right: 0; width: 540px} }
+
+@media (max-width: 575px){ .u-section-1-1 .u-sheet-1 {min-height: 384px}
+.u-section-1-1 .u-form-1 {width: 340px}
+.u-section-1-1 .u-btn-2 {margin-right: 42px; padding-right: 28px; padding-bottom: 11px; padding-left: 26px} }

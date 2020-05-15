@@ -1,0 +1,15 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Profil extends Model
+{
+    public $fillable = ['adresse', 'phone',];
+
+
+    public  function user() {
+        return $this->belongsTo(User::class);
+    }
+}

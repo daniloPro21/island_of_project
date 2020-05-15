@@ -1,0 +1,75 @@
+.u-section-1 {background-image: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/nesa-by-makers-737053-unsplash.jpg")}
+.u-section-1 .u-sheet-1 {min-height: 670px}
+.u-section-1 .u-text-1 {font-weight: 700; font-size: 4.5rem; width: 861px; margin: 175px auto 0}
+.u-section-1 .u-group-1 {width: 821px; min-height: 147px; margin: 96px auto 60px 160px}
+.u-section-1 .u-container-layout-1 {padding: 30px 30px 10px}
+.u-section-1 .u-text-2 {font-size: 1.875rem; margin: -5px 0 15px}
+
+@media (max-width: 1199px){ .u-section-1 .u-sheet-1 {min-height: 552px}
+.u-section-1 .u-group-1 {margin-left: 120px} }
+
+@media (max-width: 991px){ .u-section-1 .u-sheet-1 {min-height: 423px}
+.u-section-1 .u-text-1 {width: 720px}
+.u-section-1 .u-group-1 {width: 720px; margin-left: 0} }
+
+@media (max-width: 767px){ .u-section-1 .u-sheet-1 {min-height: 317px}
+.u-section-1 .u-text-1 {width: 540px}
+.u-section-1 .u-group-1 {width: 540px}
+.u-section-1 .u-container-layout-1 {padding-left: 10px; padding-right: 10px} }
+
+@media (max-width: 575px){ .u-section-1 .u-sheet-1 {min-height: 200px}
+.u-section-1 .u-text-1 {font-size: 3rem; width: 340px; margin-top: 192px; margin-left: 0; margin-right: 0}
+.u-section-1 .u-group-1 {width: 340px; margin-top: 79px} }.u-section-2 .u-sheet-1 {min-height: 1231px}
+.u-section-2 .u-group-1 {min-height: 1324px; height: auto; margin: 42px auto 22px 0}
+.u-section-2 .u-container-layout-1 {padding: 0 30px 30px}
+.u-section-2 .u-form-1 {height: 1077px; width: 454px; margin: 0 auto}
+.u-section-2 .u-form-group-1 {margin: 0 auto 27px}
+.u-section-2 .u-input-1 {background-image: none}
+.u-section-2 .u-form-group-3 {margin-left: 0; margin-right: 0}
+.u-section-2 .u-input-3 {background-image: none}
+.u-section-2 .u-form-group-4 {margin: 0 0 27px}
+.u-section-2 .u-input-4 {background-image: none}
+.u-section-2 .u-form-group-5 {margin-top: 0; margin-bottom: 27px}
+.u-section-2 .u-form-group-6 {margin: 0 0 27px}
+.u-section-2 .u-input-6 {background-image: none}
+.u-section-2 .u-form-group-7 {margin: 0 0 27px}
+.u-section-2 .u-input-7 {background-image: none}
+.u-section-2 .u-form-group-8 {margin: 0 0 27px}
+.u-section-2 .u-input-8 {background-image: none}
+.u-section-2 .u-form-group-9 {margin-left: 0; margin-right: 0}
+.u-section-2 .u-input-9 {background-image: none}
+.u-section-2 .u-form-group-10 {margin-left: 0; margin-right: 0}
+.u-section-2 .u-input-10 {background-image: none}
+.u-section-2 .u-btn-1 {font-weight: 700}
+.u-section-2 .u-btn-2 {background-image: none; font-weight: 700; margin: -66px 335px 0 auto; padding: 9px 31px 11px 30px}
+
+@media (max-width: 1199px){ .u-section-2 .u-group-1 {margin-right: initial; margin-left: initial}
+.u-section-2 .u-form-1 {margin-right: 178px; margin-left: 208px}
+.u-section-2 .u-btn-2 {margin-right: 131px} }
+
+@media (max-width: 991px){ .u-section-2 .u-form-1 {margin-right: 88px; margin-left: 118px}
+.u-section-2 .u-btn-2 {margin-right: 0} }
+
+@media (max-width: 767px){ .u-section-2 .u-container-layout-1 {padding-left: 10px; padding-right: 10px}
+.u-section-2 .u-form-1 {margin-right: 18px; margin-left: 48px} }
+
+@media (max-width: 575px){ .u-section-2 .u-form-1 {margin-right: 0; margin-left: 0; width: 320px}
+.u-section-2 .u-btn-2 {margin-top: -68px; margin-right: 21px; padding-right: 26px; padding-left: 24px} }.u-block-3e0e-2 {position: absolute; bottom: 10px}
+.u-block-3e0e-3 {position: absolute; left: 0}
+.u-block-3e0e-4 {position: absolute; right: 0}.u-section-3-1 .u-sheet-1 {min-height: 241px}
+.u-section-3-1 .u-text-1 {width: 416px; margin: 45px auto 0}
+.u-section-3-1 .u-form-1 {height: 77px; width: 1008px; margin: 27px auto 0}
+.u-section-3-1 .u-form-group-3 {margin-left: auto; margin-right: auto}
+.u-section-3-1 .u-input-3 {background-image: none}
+
+@media (max-width: 1199px){ .u-section-3-1 .u-text-1 {margin-left: 344px}
+.u-section-3-1 .u-form-1 {width: 940px; margin: 15px 124px 60px 246px} }
+
+@media (max-width: 991px){ .u-section-3-1 .u-text-1 {margin-left: 263px}
+.u-section-3-1 .u-form-1 {margin-right: 61px; margin-left: 89px; width: 720px} }
+
+@media (max-width: 767px){ .u-section-3-1 .u-text-1 {width: 335px; margin-top: 44px; margin-left: auto}
+.u-section-3-1 .u-form-1 {width: 540px; margin: 0 0 44px} }
+
+@media (max-width: 575px){ .u-section-3-1 .u-text-1 {width: auto; margin-top: 36px; margin-right: 0; margin-left: 5px}
+.u-section-3-1 .u-form-1 {width: 340px; margin-bottom: 36px} }
