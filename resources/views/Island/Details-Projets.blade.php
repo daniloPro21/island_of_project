@@ -74,8 +74,9 @@
                                         <div class="u-container-layout u-valign-top u-container-layout-2">
                                             @if ($projets->user->file)
                                                 <img class="u-expand-resize u-image u-image-default u-image-1 rounded-circle" data-image-width="1280" data-image-height="800" src="{{ asset('uploadprofile/'.$projets->user->file) }}">
-                                            @endif
+                                            @else
                                                 <img class="u-expand-resize u-image u-image-default u-image-1 rounded-circle" data-image-width="1280" data-image-height="800" src="{{ asset('images/avatar.jpg') }}">
+                                            @endif
                                                 <a href="https://wa.me/{{ $us->phone }}" class="u-border-radius-33 u-btn u-btn-round u-button-style u-btn-1">Contacter</a>
                                         </div>
                                     </div>
