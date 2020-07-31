@@ -6,7 +6,17 @@
         <h1 class="u-text u-text-1">ISLAND OF PROJECTS</h1>
         <div class="u-align-center u-container-style u-group u-group-1">
             <div class="u-container-layout u-container-layout-1">
-                <h3 class="text-center">LE PREMIER RESERVOIR DE VISUALISATION LIBRE&nbsp DE PROJETS POUR LES INVESTISSEURS</h3>
+
+
+                    <h3 class="text-center">
+                        LE PREMIER RESERVOIR DE VISUALISATION LIBRE DE PROJETS POUR LES
+                        <marquee behavior="slide" direction="down">
+                      <center>
+                          INVESTISSEURS ET INNOVATUERS
+                      </center>
+                        </marquee>
+
+                    </h3>
             </div>
         </div>
         <div class="u-align-center u-container-style u-group u-group-2">
@@ -70,6 +80,8 @@
 </section>
 
 <section class="u-align-center u-clearfix u-white u-section-3" id="sec-77da">
+
+
     <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-palette-2-base u-text-1">Projet COVID 19</h2>
         <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-20 u-layout-wrap u-layout-wrap-1">
@@ -80,7 +92,7 @@
                         <div class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-container-layout-1">
                             <div class="u-container-style u-expanded-width u-group u-group-1">
                                 <div class="u-container-layout u-container-layout-2">
-                                    <a href="{{ route('detail', ['projets' => $c->id]) }}">
+                                    <a href="{{ route('projet', ['projets' => $c->id]) }}">
                                     <img class="u-expand-resize u-expanded-width u-image u-image-1" src="{{ asset('uploads/'.$c->logo) }}" data-image-width="1280" data-image-height="800">
                                     </a>
                                 </div>
@@ -103,8 +115,8 @@
                             </div>
                             <div class="u-container-style u-expanded-width u-group u-group-3">
                                 <div class="u-container-layout u-valign-top-lg u-valign-top-xs u-container-layout-4">
-                                    <a href="#" class="u-border-radius-10 u-btn u-btn-round u-button-style u-white u-btn-1">visiter le site web</a>
-                                    <a href="#" class="u-border-2 u-border-palette-2-base u-border-radius-10 u-btn u-btn-round u-button-style u-none u-btn-2">Pich deck video&nbsp;</a>
+                                    <a href="https://{{$c->site}}" class="u-border-radius-10 u-btn u-btn-round u-button-style u-white u-btn-1">visiter le site web</a>
+                                    <a href="{{ $c->video }}" class="u-border-2 u-border-palette-2-base u-border-radius-10 u-btn u-btn-round u-button-style u-none u-btn-2">Pich deck video&nbsp;</a>
                                 </div>
                             </div>
                         </div>
@@ -113,6 +125,9 @@
                 </div>
             </div>
         </div>
+        @if ($t == 3)
+            <a href="{{ route('covid19') }}" class="u-border-radius-20 u-btn u-btn-round u-button-style u-palette-2-base u-btn-7">Voir Plus de projet covid </a>
+        @endif
     </div>
 </section>
 <section class="u-align-center u-clearfix u-white u-section-3" id="sec-77da">
@@ -126,7 +141,7 @@
                         <div class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-container-layout-1">
                             <div class="u-container-style u-expanded-width u-group u-group-1">
                                 <div class="u-container-layout u-container-layout-2">
-                                    <a href="{{ route('detail', ['projets' => $ps->id]) }}">
+                                    <a href="{{ route('projet', ['projets' => $ps->id]) }}">
                                         <img class="u-expand-resize u-expanded-width u-image u-image-1"
                                              src="{{ asset('uploads/'.$ps->logo) }}" data-image-width="1280" data-image-height="800">
                                     </a>
@@ -160,7 +175,6 @@
                 </div>
             </div>
         </div>
-        {{$p->links()}}
         <a href="{{ route('voir') }}" class="u-border-radius-20 u-btn u-btn-round u-button-style u-palette-2-base u-btn-7">Voir tous les projets</a>
     </div>
 </section>

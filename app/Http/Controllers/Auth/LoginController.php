@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Laravel\Socialite\Facades\Socialite;
@@ -43,8 +44,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
-
     /**
      * Redirect the user to the GitHub authentication page.
      *
@@ -67,7 +66,7 @@ class LoginController extends Controller
 
         if ($face){
             Auth::login($face, true);
-            return redirect()->route('Acceuil');
+            return redirect()->route('Acceuil')->with('success', 'Bienvenus sur Island of Projects');
         }else{
             $user = User::firstOrCreate([
                 'name' => $user->getName(),
@@ -75,7 +74,7 @@ class LoginController extends Controller
                 'password' => bcrypt(12345678)
             ]);
             Auth::login($user, true);
-            return redirect()->route('Acceuil');
+            return redirect()->route('editer')->with('Success', 'Editer votre profil pour continuer');
         }
     }
 
@@ -90,7 +89,8 @@ class LoginController extends Controller
         $find = User::all()->where('email', '=', $user->getEmail())->first();
         if ($find){
             Auth::login($find, true);
-            return redirect()->route('Acceuil');
+            return redirect()->route('Acceuil')->with('success', 'Bienvenus sur Island of Projects');
+
         }else{
             $user = User::firstOrCreate([
                 'name' => $user->getName(),
@@ -98,7 +98,8 @@ class LoginController extends Controller
                 'password' => bcrypt(12345678)
             ]);
             Auth::login($user, true);
-            return redirect()->route('Acceuil');
+            return redirect()->route('editer')->with('Success', 'Editer votre profil pour continuer');
+
         }
     }
 }

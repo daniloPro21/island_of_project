@@ -19,3 +19,12 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+#porkbun config start
+
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} !^islandofprojects\.com [NC]
+#Rewriterule ^(.*)$ http://islandofprojects.com [R,L]
+
+#porkbun config end
+

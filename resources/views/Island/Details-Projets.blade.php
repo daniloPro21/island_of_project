@@ -72,8 +72,11 @@
                                 <div class="u-container-layout u-container-layout-1">
                                     <div class="u-container-style u-expanded-width-xs u-group u-group-1">
                                         <div class="u-container-layout u-valign-top u-container-layout-2">
-                                            <img class="u-expand-resize u-image u-image-default u-image-1 rounded-circle" data-image-width="1280" data-image-height="800" src="{{ asset('uploadprofile/'.$projets->user->file) }}">
-                                            <a href="https://wa.me/{{ $us->phone }}" class="u-border-radius-33 u-btn u-btn-round u-button-style u-btn-1">Contacter</a>
+                                            @if ($projets->user->file)
+                                                <img class="u-expand-resize u-image u-image-default u-image-1 rounded-circle" data-image-width="1280" data-image-height="800" src="{{ asset('uploadprofile/'.$projets->user->file) }}">
+                                            @endif
+                                                <img class="u-expand-resize u-image u-image-default u-image-1 rounded-circle" data-image-width="1280" data-image-height="800" src="{{ asset('images/avatar.jpg') }}">
+                                                <a href="https://wa.me/{{ $us->phone }}" class="u-border-radius-33 u-btn u-btn-round u-button-style u-btn-1">Contacter</a>
                                         </div>
                                     </div>
                                 </div>

@@ -30,15 +30,14 @@
                                    <a href="{{ route('categorie', ['name' => 'agriculture']) }}" class="u-align-center-lg text-white u-align-center-md u-align-center-xl u-text u-text-default u-text-2 font-weight-bold">AGRICULTURE</a>
                                </div>
                            </div>
-                           <div class="u-container-style u-layout-cell u-size-12 u-size-20-md u-layout-cell-3">
-                               <div class="u-container-layout u-valign-middle u-container-layout-3">
-                                   <a href="{{ route('categorie', ['name' => 'numerique']) }}" class="u-align-center text-white u-text u-text-default u-text-3 font-weight-bold">NUMERIQUE
-                                   </a>
+                           <div class="u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-size-12 u-size-20-md u-layout-cell-2">
+                               <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                   <a href="{{ route('categorie', ['name' => 'numerique']) }}" class="u-align-center-lg text-white u-align-center-md u-align-center-xl u-text u-text-default u-text-2 font-weight-bold">NUMERIQUE</a>
                                </div>
                            </div>
-                           <div class="u-container-style u-layout-cell u-size-12 u-size-30-md u-layout-cell-4">
-                               <div class="u-container-layout u-valign-middle u-container-layout-4">
-                                   <a href=" {{ route('categorie', ['name' => 'services']) }} " class="u-align-center u-text u-text-default u-text-4 text-white font-weight-bold">SERVICES</a>
+                           <div class="u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-size-12 u-size-20-md u-layout-cell-2">
+                               <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                   <a href="{{ route('categorie', ['name' => 'services']) }}" class="u-align-center-lg text-white u-align-center-md u-align-center-xl u-text u-text-default u-text-2 font-weight-bold">SERVICES</a>
                                </div>
                            </div>
                            <div class="u-container-style u-layout-cell u-right-cell u-size-12 u-size-30-md u-layout-cell-5">
@@ -66,7 +65,7 @@
                                <div class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-container-layout-1">
                                    <div class="u-container-style u-expanded-width u-group u-group-1">
                                        <div class="u-container-layout u-container-layout-2">
-                                           <a href="{{route('detail', ['projets' => $ts->id])}}">
+                                           <a href="{{route('projet', ['projets' => $ts->id])}}">
                                                <img class="u-expand-resize u-expanded-width u-image u-image-1"
                                                     src="{{asset('uploads/'.$ts->logo)}}" data-image-width="1280" data-image-height="800">
                                            </a>
@@ -91,8 +90,8 @@
                                    </div>
                                    <div class="u-container-style u-expanded-width u-group u-group-3">
                                        <div class="u-container-layout u-valign-top-lg u-valign-top-xs u-container-layout-4">
-                                           <a href="#" class="u-border-radius-10 u-btn u-btn-round u-button-style u-white u-btn-1">visiter le site web</a>
-                                           <a href="#" class="u-border-2 u-border-palette-2-base u-border-radius-10 u-btn u-btn-round u-button-style u-none u-btn-2">Pich deck video&nbsp;</a>
+                                           <a href="https://{{$ts->site}}" class="u-border-radius-10 u-btn u-btn-round u-button-style u-white u-btn-1">visiter le site web</a>
+                                           <a href="https://{{$ts->video}}" class="u-border-2 u-border-palette-2-base u-border-radius-10 u-btn u-btn-round u-button-style u-none u-btn-2">Pich deck video&nbsp;</a>
                                        </div>
                                    </div>
                                </div>

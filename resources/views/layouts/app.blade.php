@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+
     <meta charset="utf-8">
     <meta name="keywords" content="ISLAND OF PROJECTS, Projet COVID 19, Top Projets, Nos Statistiques, Les Startup qui nous font confiance">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Acceuil</title>
     <link rel="stylesheet" href="{{ asset('css/nicepage.css') }}" media="screen">
 
 
 
-    @if (Route::current()->getName() == 'detail')
+    @if (Route::current()->getName() == 'projet')
         <link rel="stylesheet" href="{{ asset('css/Details-Projets.css') }}" media="screen">
     @else
         <link rel="stylesheet" href="{{ asset('css/Acceuil.css') }}" media="screen">
@@ -47,7 +47,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ Route::current()->getName() }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -55,14 +55,14 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/logo.png')}}" />
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <header class="u-clearfix u-header u-white u-header" id="sec-0606"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
-                <a href="#" class="u-image u-logo u-image-1" data-image-width="2084" data-image-height="984">
+                <a href="{{ route('Acceuil') }}" class="u-image u-logo u-image-1" data-image-width="2084" data-image-height="984">
                     <img src="{{ asset('images/LOGOISLANDOFPROJECTS1-01.png') }}" class="u-logo-image u-logo-image-1" data-image-width="182.4617">
                 </a>
                 <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -75,7 +75,7 @@
                         </a>
                     </div>
                     <div class="u-custom-menu u-nav-container">
-                        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ route('Acceuil') }}" style="padding: 10px 20px;">PROJET / IDEES</a>
+                        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ route('voir') }}" style="padding: 10px 20px;">PROJET / IDEES</a>
                             </li>
 
                             <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 10px 20px;">VOIR SUR LA CARTE</a>
@@ -84,8 +84,12 @@
                                         </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="{{ route('carte') }}">Autres</a>
                                         </li></ul>
                                 </div>
-                                @if(Auth()->user())
-                            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ route('editer') }}" style="padding: 10px 20px;">{{ auth()->user()->name }}</a>
+                            @if(Auth()->user())
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ route('editer') }}" style="padding: 10px 20px;">{{ auth()->user()->name }}</a>
+                                <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
+                                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="{{ route('userp') }}">Vos Projets <span class="badge badge-danger">{{ auth()->user()->projet->count() }}</span></a>
+                                        </li></ul>
+                                </div>
                                 @if (auth()->user()->file)
                             </li><li class="u-nav-item"><img src="{{ asset('uploadprofile/'.auth()->user()->file) }}" height="70" width="90" class=" rounded-circle u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{{ route('editer') }}" style="padding: 10px 20px;">
                                 @else
@@ -126,6 +130,7 @@
                                     </div>
                                     @if(Auth()->user())
                                 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"  href="{{ route('editer') }}" style="padding: 10px 20px;">{{ auth()->user()->name }}</a>
+                                </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"  href="{{ route('userp') }}" style="padding: 10px 20px;">Vos Projets</a>
                                     @if (auth()->user()->file)
                                 </li><li class="u-nav-item"><img alt="{{ auth()->user()->name }}"  src="{{ asset('uploadprofile/'.auth()->user()->file) }}" height="70" width="90" class="rounded-circle " href="{{ route('editer') }}" style="padding: 10px 20px;">
                                 @else
@@ -152,12 +157,17 @@
                         <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
                     </div>
                 </nav>
-            </div></header>
+                @include('sweetalert::alert')
+            </div>
+        </header>
 
 
         <main>
+            @include('partial.alert')
             @yield('content')
         </main>
+
+
     </div>
 
 
@@ -189,13 +199,13 @@
                         <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
                             <div class="u-container-layout u-valign-top-xs u-container-layout-2">
                                 <p class="u-align-center u-text u-text-3">
-                                    <a href="Acceuil.html">Projet/Idees</a>
+                                    <a href="{{ route('Acceuil') }}">Projet/Idees</a>
                                 </p>
                                 <p class="u-align-center u-text u-text-4">
-                                    <a href="Inscription.html">S'incrire</a>
+                                    <a href="{{ route('register') }}">S'incrire</a>
                                 </p>
                                 <p class="u-align-center u-text u-text-5">
-                                    <a href="Connexion.html">Se Connecter</a>
+                                    <a href="{{ route('login') }}">Se Connecter</a>
                                 </p>
                                 <span class="u-border-2 u-border-palette-1-base u-icon u-icon-circle u-spacing-10 u-text-palette-1-base u-icon-1">
                     <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 52 52" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3313"></use></svg>

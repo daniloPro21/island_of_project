@@ -61,7 +61,7 @@ class RegisterController extends Controller
      *
      * @param array $data
      * @param Request $request
-     * @return \App\User
+     * @return \Illuminate\Http\RedirectResponse
      */
     protected function create(array $data)
     {
@@ -74,6 +74,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'file' => $filename
         ]);
+        return  redirect()->route('editer')->with('success', 'Inscription reussite');
     }
 
 }

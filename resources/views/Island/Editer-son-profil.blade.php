@@ -18,6 +18,7 @@
                                    @foreach($errors->all() as $e)
                                        <p class="alert alert-danger">{{ $e }}</p>
                                    @endforeach
+
                                    <div class="u-form-group u-form-name">
                                        <label for="name-7c4e" class="u-label">Adresse</label>
                                        <input type="text" placeholder="Adresse" id="name-7c4e" name="adresse" class="u-border-3 u-border-palette-1-dark-1 u-input u-input-rectangle">

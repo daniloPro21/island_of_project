@@ -5,7 +5,12 @@
                <h1 class="u-text u-text-1">ISLAND OF PROJECTS</h1>
                <div class="u-align-center u-container-style u-group u-group-1">
                    <div class="u-container-layout u-container-layout-1">
-                       <h3 class="text-center">LE PREMIER RESERVOIR DE VISUALISATION LIBRE DE PROJETS POUR LES INVESTISSEURS</h3>
+                       <marquee behavior="slide" direction="down">
+                       <h3 class="text-center">
+                           LE PREMIER RESERVOIR DE VISUALISATION LIBRE DE PROJETS POUR LES
+                           INVESTISSEURS ET INNOVATUERS
+                       </h3>
+                       </marquee>
                    </div>
                </div>
                <div class="u-align-center u-container-style u-group u-group-2">
@@ -56,6 +61,13 @@
        <section class="u-align-center u-clearfix u-white u-section-3" id="sec-22b7">
            <div class="u-clearfix u-sheet u-sheet-1">
                <h2 class="u-text u-text-palette-2-base u-text-1">Touts les projets</h2>
+                   <div class="col-sm-6">
+                       @if(session('success_message'))
+                           <div class="alert alert-success">
+                               {{ session('success_message') }}
+                           </div>
+                       @endif
+                   </div>
                <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-20 u-layout-wrap u-layout-wrap-1">
                    <div class="u-layout">
                        <div class="u-layout-row">
@@ -64,7 +76,7 @@
                                <div class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-container-layout-1">
                                    <div class="u-container-style u-expanded-width u-group u-group-1">
                                        <div class="u-container-layout u-container-layout-2">
-                                           <a href="{{route('detail', ['projets' => $ts->id])}}">
+                                           <a href="{{route('projet', ['projets' => $ts->id])}}">
                                                <img class="u-expand-resize u-expanded-width u-image u-image-1"
                                                     src="{{asset('uploads/'.$ts->logo)}}" data-image-width="1280" data-image-height="800">
                                            </a>
@@ -81,15 +93,15 @@
                                            </p>
                                            <h3 class="u-text u-text-palette-2-base u-text-7 badge badge-primary">{{ $ts->categorie }}</h3>
                                            <h4 class="u-text u-text-8">{{$ts->stade}}</h4>
-                                           <h4 class="u-text u-text-9">Stade</h4>
-                                           <h4 class="u-align-left-lg u-align-left-xl u-text u-text-10">Produit</h4>
-                                           <h4 class="u-align-left-xl u-text u-text-11">${{ $ts->nature }}</h4>
+                                           <h4 class="u-text u-text-9">Stade:</h4>
+                                           <h4 class="u-align-left-lg u-align-left-xl u-text u-text-10">Produit:</h4>
+                                           <h4 class="u-align-left-xl u-text u-text-11">{{ $ts->nature }}</h4>
                                        </div>
                                    </div>
                                    <div class="u-container-style u-expanded-width u-group u-group-3">
                                        <div class="u-container-layout u-valign-top-lg u-valign-top-xs u-container-layout-4">
-                                           <a href="#" class="u-border-radius-10 u-btn u-btn-round u-button-style u-white u-btn-1">visiter le site web</a>
-                                           <a href="#" class="u-border-2 u-border-palette-2-base u-border-radius-10 u-btn u-btn-round u-button-style u-none u-btn-2">Pich deck video&nbsp;</a>
+                                           <a href="https://{{$ts->site}}" class="u-border-radius-10 u-btn u-btn-round u-button-style u-white u-btn-1">visiter le site web</a>
+                                           <a href="https://{{ $ts->video }}" class="u-border-2 u-border-palette-2-base u-border-radius-10 u-btn u-btn-round u-button-style u-none u-btn-2">Pich deck video&nbsp;</a>
                                        </div>
                                    </div>
                                </div>
@@ -101,34 +113,34 @@
                <a href="{{ route('soumettre') }}" class="u-border-radius-20 u-btn u-btn-round u-button-style u-palette-2-base u-btn-7">Soumettre son Projet</a>
            </div>
        </section>
-       <section class="u-clearfix u-grey-10 u-section-5" id="sec-b0fc">
-           <div class="u-clearfix u-sheet u-sheet-1">
-               <div class="u-container-style u-expanded-width u-group u-group-1">
-                   <div class="u-container-layout u-container-layout-1">
-                       <h1 class="u-align-center u-text u-text-default u-text-1">Nos Statistiques</h1>
-                       <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-2">
-                           <div class="u-container-layout u-valign-bottom-xs u-valign-top-lg u-valign-top-md u-valign-top-xl u-container-layout-2">
-                               <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-2" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+300 000</b>
-                                   <br>
-                               </h3>
-                               <h3 class="u-align-center u-text u-text-palette-2-base u-text-3">&nbsp;projets references</h3>
-                               <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-4" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+500 000</b>
-                                   <br>
-                               </h3>
-                               <h3 class="u-align-center u-text u-text-default u-text-palette-2-base u-text-5">&nbsp;consultations par jour</h3>
-                               <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+200 000</b>
-                                   <br>
-                               </h3>
-                               <h3 class="u-align-center u-text u-text-palette-2-base u-text-7">redirection vers les sites projets</h3>
-                               <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-8" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+100 000</b>
-                                   <br>
-                               </h3>
-                               <h3 class="u-align-center u-text u-text-palette-2-base u-text-9">contacts des&nbsp;proteurs deprojets</h3>
+           <section class="u-clearfix u-grey-10 u-section-5" id="sec-b0fc">
+               <div class="u-clearfix u-sheet u-sheet-1">
+                   <div class="u-container-style u-expanded-width u-group u-group-1">
+                       <div class="u-container-layout u-container-layout-1">
+                           <h1 class="u-align-center u-text u-text-default u-text-1">Nos Statistiques</h1>
+                           <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-2">
+                               <div class="u-container-layout u-valign-bottom-xs u-valign-top-lg u-valign-top-md u-valign-top-xl u-container-layout-2">
+                                   <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-4" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+300 000</b>
+                                       <br>
+                                   </h3>
+                                   <h3 class="u-align-center u-text u-text-palette-2-base u-text-3">projets references</h3>
+                                   <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-4" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+500 000</b>
+                                       <br>
+                                   </h3>
+                                   <h3 class="u-align-center u-text u-text-default u-text-palette-2-base u-text-5">&nbsp;consultations par jour</h3>
+                                   <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-6" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+200 000</b>
+                                       <br>
+                                   </h3>
+                                   <h3 class="u-align-center u-text u-text-palette-2-base u-text-7">redirection vers les sites projets</h3>
+                                   <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-default u-text-8" data-animation-name="counter" data-animation-event="scroll" data-animation-duration="3000"><b>+100 000</b>
+                                       <br>
+                                   </h3>
+                                   <h3 class="u-align-center u-text u-text-palette-2-base u-text-9">contacts des&nbsp;proteurs deprojets</h3>
+                               </div>
                            </div>
                        </div>
                    </div>
                </div>
-           </div>
-       </section>
+           </section>
 
    @endsection
